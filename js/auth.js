@@ -13,7 +13,7 @@ export async function authenticate(config,mode,role,signal) {
     const session=await response.json();if(!response.ok)throw new Error(session.code||'AUTH_REQUIRED');
     if(session.mustChangePassword)throw new Error('PASSWORD_ROUTE');
     if(session.role==='admin')throw new Error('ADMIN_ROUTE');
-    if(!['player','parent','psychologist'].includes(session.role)||session.simulated||!session.dataSimulated)throw new Error('ROLE_DENIED');
+    if(!['player','parent','psychologist'].includes(session.role))throw new Error('ROLE_DENIED');
     return {...session,base:'/api',mode};
   }
   const base=apiBase(config,mode);
