@@ -1,0 +1,25 @@
+name: Validate Siguiente Jugada
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check Worker accounts and Google Sheets authorization
+        run: node --test tests/worker-d1.test.js
+      - name: Build public assets with strict allowlist
+        run: python scripts/build-deploy.py
+      - name: Confirm no private files are deployed
+        run: test ! -e dist/private && test ! -e dist/server && test -f dist/index.html
