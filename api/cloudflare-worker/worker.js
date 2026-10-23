@@ -30,7 +30,7 @@ export async function verifyAccess(token,env,io) {
   return claims;
 }
 
-async function googleToken(env,io) {
+export async function googleToken(env,io) {
   if(!env.GOOGLE_SERVICE_ACCOUNT_JSON)fail('EXTERNAL_SETUP_REQUIRED',503);
   const account=JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_JSON),now=Math.floor(io.now()/1000);
   const head=encode({alg:'RS256',typ:'JWT'}),body=encode({iss:account.client_email,scope:'https://www.googleapis.com/auth/spreadsheets.readonly',aud:'https://oauth2.googleapis.com/token',iat:now,exp:now+3600});
