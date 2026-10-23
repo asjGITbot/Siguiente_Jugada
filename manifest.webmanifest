@@ -1,11 +1,32 @@
 {
-  "id":"./", "name":"SSR11 — Mi evolución futbolera", "short_name":"SSR11",
-  "description":"Mi propia historia de reflexión, aprendizaje y práctica.",
-  "lang":"es-PE", "start_url":"./", "scope":"./", "display":"standalone",
-  "background_color":"#08121f", "theme_color":"#08121f",
-  "icons":[
-    {"src":"public/assets/pwa/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"public/assets/pwa/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"public/assets/pwa/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  "id": "./",
+  "name": "Siguiente Jugada · SSR11 Fútbol Base",
+  "short_name": "Siguiente Jugada",
+  "description": "Mis partidos, mis aprendizajes y mi siguiente jugada.",
+  "lang": "es-PE",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#08121f",
+  "theme_color": "#08121f",
+  "icons": [
+    {
+      "src": "public/assets/pwa/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/assets/pwa/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "public/assets/pwa/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }
