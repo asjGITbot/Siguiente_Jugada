@@ -3,7 +3,7 @@ export async function fetchData(config,session,signal,schema) {
   const response=await fetch(session.base+'/data',{method:'POST',credentials:'include',cache:'no-store',headers:{'Content-Type':'application/json',...(session.mode==='account'?{'X-SSR11-Request':'1'}:{})},body:JSON.stringify({googleSheetsUrl:config.GOOGLE_SHEETS_URL}),signal});
   if(!response.ok)throw new Error(response.status===403?'SHEET_NOT_AUTHORIZED':response.status===401?'SESSION_EXPIRED':'SOURCE_UNAVAILABLE');
   const payload=await response.json();
-  if(session.mode==='account'&&(payload.source?.transport!=='AUTHENTICATED_SIMULATION'||payload.source?.simulated!==true))throw new Error('MIXED_SOURCE');
+  if(session.mode==='account'&&payload.source?.transport!=='GOOGLE_SHEETS')throw new Error('MIXED_SOURCE');
   if(session.mode!=='demo'&&payload.source?.transport==='MOCK_HTTP')throw new Error('MIXED_SOURCE');
   const {indexes}=mapHeaders(payload.headers,schema);
   if(session.role==='player'&&(!payload.redactedFields?.includes('q54')||payload.rows?.some(r=>(r.values||r)[indexes.q54]!=null&&(r.values||r)[indexes.q54]!=='')))throw new Error('FIELD_PERMISSION_VIOLATION');
