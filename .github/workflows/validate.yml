@@ -20,7 +20,15 @@ jobs:
       - name: Install asset conversion library
         run: python -m pip install 'Pillow>=10,<12'
       - name: Check Worker accounts and Google Sheets authorization
-        run: node --test tests/*.test.js
+        run: node --test tests/worker-d1.test.js
+      - name: Validate PWA syntax without publishing private test fixtures
+        run: |
+          node --check js/main.js
+          node --check js/auth.js
+          node --check js/data-loader.js
+          node --check js/screens/views.js
+          node --check api/cloudflare-worker/accounts-worker.js
+          node --check api/cloudflare-worker/worker.js
       - name: Build public assets with strict allowlist
         run: python scripts/build-deploy.py
       - name: Confirm no private files are deployed
