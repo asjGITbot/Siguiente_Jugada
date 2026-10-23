@@ -1,0 +1,8 @@
+{
+  "GOOGLE_SHEETS_URL": "",
+  "API_BASE_URL": "",
+  "locale": "es-PE",
+  "timeZone": "America/Lima",
+  "AUTH_MODE": "PENDING_PRODUCTION_AUTH",
+  "DATA_MODE": "DISABLED_UNTIL_BACKEND_READY"
+}
