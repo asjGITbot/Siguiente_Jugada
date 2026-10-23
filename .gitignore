@@ -1,0 +1,24 @@
+# Excluir datos y claves
+.env
+.env.*
+!.env.example
+*.xlsx
+*.xls
+*.csv
+*.sqlite3
+*.sqlite
+*.db
+*.pem
+*.key
+private/
+server/data/
+tests/fixtures/
+docs/screenshots/
+docs/sources/
+docs/design-reference/
+node_modules/
+__pycache__/
+*.pyc
+*.log
+.wrangler/
+dist/

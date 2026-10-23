@@ -1,0 +1,10 @@
+{
+  "name": "ssr11-pwa-sandbox",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "start": "python scripts/app-server.py",
+    "test:accounts": "python -m unittest discover -s tests -p test_accounts.py -v"
+  }
+}
