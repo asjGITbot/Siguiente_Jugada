@@ -15,6 +15,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Install asset conversion library
+        run: python -m pip install 'Pillow>=10,<12'
       - name: Build safe frontend
         run: python scripts/build-deploy.py
       - name: Bind D1 database ID
