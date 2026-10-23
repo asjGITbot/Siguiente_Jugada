@@ -1,0 +1,124 @@
+{
+  "states": {
+    "PENDIENTE": "Pendiente de comprobar",
+    "EVIDENCIA_FAVORABLE": "Hay evidencia de práctica",
+    "EN_PRACTICA": "Sigo practicando",
+    "SIN_DATOS": "Sin datos suficientes"
+  },
+  "rules": [
+    {
+      "id": "mission.1",
+      "option": "🙋 Pedir más el balón.",
+      "evidenceField": "q23",
+      "favorableValues": [
+        "Pedí el balón con la voz.",
+        "Pedí el balón con una señal.",
+        "Pedí el balón con la voz y una señal."
+      ],
+      "description": "Pedir con voz o señal",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.2",
+      "option": "🦁 Atreverme a encarar cuando convenga.",
+      "evidenceField": "q20",
+      "favorableValues": [
+        "Lo intenté algunas veces",
+        "Me atreví cuando convenía",
+        "Actué con decisión y busqué más oportunidades"
+      ],
+      "description": "Intentar una oportunidad difícil",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.3",
+      "option": "⚡ Competir mejor en los duelos.",
+      "evidenceField": "q21",
+      "favorableValues": [
+        "Competí algunas veces",
+        "Disputé casi todos con ganas",
+        "Competí con decisión durante todo mi tiempo de juego"
+      ],
+      "description": "Participar en los duelos",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.4",
+      "option": "🧠 Decidir más rápido.",
+      "evidenceField": "q22",
+      "favorableValues": [
+        "Algunas veces decidí solo",
+        "Decidí según lo que veía",
+        "Leí el juego y actué con autonomía"
+      ],
+      "description": "Tomar decisiones propias",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.5",
+      "option": "🔄 Recuperarme antes de los errores.",
+      "evidenceField": "q27",
+      "favorableValues": [
+        "En la siguiente jugada.",
+        "Inmediatamente."
+      ],
+      "description": "Volver a concentrarme",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.6",
+      "option": "👀 Mirar más antes de recibir.",
+      "evidenceField": "q31",
+      "favorableValues": [
+        "Mirar antes de actuar"
+      ],
+      "description": "Aprendizaje declarado; evidencia indirecta",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.7",
+      "option": "🤝 Comunicarme más con mi equipo.",
+      "evidenceField": "q23",
+      "favorableValues": [
+        "Pedí el balón con la voz.",
+        "Pedí el balón con una señal.",
+        "Pedí el balón con la voz y una señal."
+      ],
+      "description": "Comunicación para recibir; evidencia parcial",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.8",
+      "option": "🎯 Mejorar una habilidad técnica.",
+      "evidenceField": "q29",
+      "favorableValues": [
+        "Pase",
+        "Control",
+        "Regate",
+        "Tiro al Arco",
+        "Defender",
+        "Comunicación",
+        "Atajada"
+      ],
+      "description": "Habilidad practicada; no acredita dominio",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    },
+    {
+      "id": "mission.9",
+      "option": "⭐ Elegir otro desafío.",
+      "evidenceField": null,
+      "favorableValues": [],
+      "description": "Necesita un detalle manual; no verificable",
+      "scope": "NEXT_MATCH_ONLY",
+      "favorableLabel": "Hay evidencia de práctica"
+    }
+  ]
+}

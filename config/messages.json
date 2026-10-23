@@ -1,0 +1,55 @@
+{
+  "rules": [
+    {
+      "id": "confidence.up",
+      "priority": 1,
+      "kind": "delta",
+      "field": "q16",
+      "direction": "up",
+      "text": "Tu confianza subió frente a tu respuesta anterior. Observa qué te ayudó."
+    },
+    {
+      "id": "confidence.down",
+      "priority": 1,
+      "kind": "delta",
+      "field": "q16",
+      "direction": "down",
+      "text": "La confianza puede subir o bajar. Lo importante es observarla."
+    },
+    {
+      "id": "offer.no-pass",
+      "priority": 2,
+      "kind": "values",
+      "values": {
+        "q23": [
+          "Pedí el balón con la voz.",
+          "Pedí el balón con una señal.",
+          "Pedí el balón con la voz y una señal."
+        ],
+        "q24": [
+          "Casi nunca me lo pasaron.",
+          "Nunca me lo pasaron."
+        ]
+      },
+      "text": "Ofrecerte para recibir también cuenta, aunque el pase no llegue."
+    },
+    {
+      "id": "reset.again",
+      "priority": 3,
+      "kind": "values",
+      "values": {
+        "q28": [
+          "Sí, volví a intentarlo.",
+          "Sí, y seguí buscando oportunidades."
+        ]
+      },
+      "text": "Volver a intentarlo es una forma de seguir aprendiendo."
+    },
+    {
+      "id": "data.not-enough",
+      "priority": 9,
+      "kind": "fallback",
+      "text": "Cada respuesta te ayuda a conocer tu propia historia."
+    }
+  ]
+}

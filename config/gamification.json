@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "disclaimer": "Reglas educativas de prueba; no miden talento ni salud psicológica.",
+  "levelStepXP": 250,
+  "xpRules": [
+    {
+      "id": "xp.reflection",
+      "label": "Registrar y reflexionar",
+      "xp": 10,
+      "allValid": [
+        "q1",
+        "q2"
+      ],
+      "anyValid": [
+        "q15",
+        "q16",
+        "q18",
+        "q31",
+        "q38"
+      ]
+    },
+    {
+      "id": "xp.emotions",
+      "label": "Observar mis emociones",
+      "xp": 5,
+      "allValid": [
+        "q16",
+        "q18"
+      ]
+    },
+    {
+      "id": "xp.learning",
+      "label": "Identificar un aprendizaje",
+      "xp": 5,
+      "allValid": [
+        "q31"
+      ]
+    },
+    {
+      "id": "xp.mission",
+      "label": "Elegir mi próximo reto",
+      "xp": 5,
+      "allValid": [
+        "q38"
+      ]
+    }
+  ],
+  "badges": [
+    {
+      "id": "first",
+      "name": "Primer paso",
+      "symbol": "flag",
+      "goal": 1,
+      "rule": "xp.reflection"
+    },
+    {
+      "id": "explorer",
+      "name": "Explorador",
+      "symbol": "compass",
+      "goal": 5,
+      "rule": "xp.reflection"
+    },
+    {
+      "id": "constant",
+      "name": "Constante",
+      "symbol": "star",
+      "goal": 10,
+      "rule": "xp.reflection"
+    },
+    {
+      "id": "mission",
+      "name": "Mi misión",
+      "symbol": "target",
+      "goal": 3,
+      "allValid": [
+        "q38"
+      ]
+    },
+    {
+      "id": "offer",
+      "name": "Me vuelvo a ofrecer",
+      "symbol": "ball",
+      "goal": 3,
+      "values": {
+        "q23": [
+          "Pedí el balón con la voz.",
+          "Pedí el balón con una señal.",
+          "Pedí el balón con la voz y una señal."
+        ]
+      }
+    },
+    {
+      "id": "again",
+      "name": "Sigo adelante",
+      "symbol": "reset",
+      "goal": 2,
+      "values": {
+        "q25": [
+          "Sí"
+        ],
+        "q28": [
+          "Sí, volví a intentarlo.",
+          "Sí, y seguí buscando oportunidades."
+        ]
+      }
+    },
+    {
+      "id": "listen",
+      "name": "Escucho y aprendo",
+      "symbol": "eye",
+      "goal": 3,
+      "anyValid": [
+        "q53.buscoparticipar",
+        "q53.seatrevio",
+        "q53.intensidad",
+        "q53.decidio",
+        "q53.desmarque",
+        "q53.pidioclaramente"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,441 @@
+{
+  "trendMinN": 3,
+  "colors": [
+    "#4ddbb4",
+    "#efc572",
+    "#a29dff",
+    "#74b5ee",
+    "#ef8792",
+    "#c5d1df"
+  ],
+  "fields": [
+    {
+      "field": "q1",
+      "title": "Quién juega",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q2",
+      "title": "Mi equipo",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q3",
+      "title": "Mi torneo",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q4",
+      "title": "Formato",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q5",
+      "title": "División",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q6",
+      "title": "Fase del partido",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q7",
+      "title": "Mi rival",
+      "screen": "aventura",
+      "type": "response",
+      "trendMinN": 3
+    },
+    {
+      "field": "q8",
+      "title": "Tiempo en cancha",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q9",
+      "title": "Mi posición",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q10",
+      "title": "Resultado declarado",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q11",
+      "title": "Goles de mi equipo",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q12",
+      "title": "Goles del rival",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q13",
+      "title": "Quién me acompañó",
+      "screen": "aventura",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q14",
+      "title": "Qué me preocupó",
+      "screen": "emociones",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q15",
+      "title": "Preocupación",
+      "screen": "emociones",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q16",
+      "title": "Confianza",
+      "screen": "emociones",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q17",
+      "title": "Lo que más disfruté",
+      "screen": "emociones",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q18",
+      "title": "Disfrute",
+      "screen": "emociones",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q19",
+      "title": "Busqué el balón",
+      "screen": "protagonista",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q20",
+      "title": "Me atreví",
+      "screen": "protagonista",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q21",
+      "title": "Competí",
+      "screen": "protagonista",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q22",
+      "title": "Decidí por mí",
+      "screen": "protagonista",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q23",
+      "title": "Cómo pedí el balón",
+      "screen": "protagonista",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q24",
+      "title": "Qué pasó con el pase",
+      "screen": "protagonista",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q25",
+      "title": "Hubo un error que me molestó",
+      "screen": "reinicio",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q26",
+      "title": "Qué hice después",
+      "screen": "reinicio",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q27",
+      "title": "Volví a concentrarme",
+      "screen": "reinicio",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q28",
+      "title": "Volví a intentarlo",
+      "screen": "reinicio",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q29",
+      "title": "Lo que practiqué",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q30",
+      "title": "Cómo me salió",
+      "screen": "aprendizajes",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q31",
+      "title": "Lo que aprendí",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q32",
+      "title": "Mi jugada importante",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q33",
+      "title": "Tipo de jugada",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q34",
+      "title": "Desenlace",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q35",
+      "title": "Nervios antes de la jugada",
+      "screen": "aprendizajes",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q36",
+      "title": "Confianza antes de la jugada",
+      "screen": "aprendizajes",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q37",
+      "title": "Qué influyó",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q38",
+      "title": "Mi próxima misión",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q39",
+      "title": "Hubo tanda de penales",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q40",
+      "title": "Resultado de la tanda",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q41",
+      "title": "Penales de mi equipo",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q42",
+      "title": "Penales del rival",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q43",
+      "title": "Mi papel en la tanda",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q44",
+      "title": "Cómo la afronté",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q45",
+      "title": "Confianza en la tanda",
+      "screen": "aprendizajes",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q46",
+      "title": "Nervios en la tanda",
+      "screen": "aprendizajes",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q47",
+      "title": "Qué pasó con mi penal",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q48",
+      "title": "Cómo reaccioné",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q49",
+      "title": "Lo que me enseñó la tanda",
+      "screen": "aprendizajes",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q50",
+      "title": "Quién me observó",
+      "screen": "espejo",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q51",
+      "title": "Mis fortalezas",
+      "screen": "espejo",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q52",
+      "title": "Lo que puedo practicar",
+      "screen": "espejo",
+      "type": "bar",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.buscoparticipar",
+      "title": "Buscó participar",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.seatrevio",
+      "title": "Se atrevió a jugar",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.intensidad",
+      "title": "Compitió con intensidad",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.decidio",
+      "title": "Decidió por sí mismo",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.desmarque",
+      "title": "Se desmarcó para recibir",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    },
+    {
+      "field": "q53.pidioclaramente",
+      "title": "Pidió el balón claramente",
+      "screen": "espejo",
+      "type": "line",
+      "trendMinN": 3
+    }
+  ],
+  "observerPairs": [
+    {
+      "self": "q19",
+      "observer": "q53.buscoparticipar"
+    },
+    {
+      "self": "q20",
+      "observer": "q53.seatrevio"
+    },
+    {
+      "self": "q21",
+      "observer": "q53.intensidad"
+    },
+    {
+      "self": "q22",
+      "observer": "q53.decidio"
+    },
+    {
+      "self": "q23",
+      "observer": "q53.pidioclaramente"
+    }
+  ]
+}

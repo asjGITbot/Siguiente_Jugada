@@ -1,0 +1,168 @@
+{
+  "title": "Mi evolución futbolera",
+  "brand": "SSR11",
+  "tagline": "Cada partido cuenta",
+  "formUrl": null,
+  "screens": [
+    {
+      "id": "aventura",
+      "label": "Mi aventura",
+      "icon": "home",
+      "title": "Cada partido cuenta.",
+      "subtitle": "Juego, descubro y vuelvo a intentarlo.",
+      "number": 1
+    },
+    {
+      "id": "emociones",
+      "label": "Mis emociones",
+      "icon": "heart",
+      "title": "Así me sentí.",
+      "subtitle": "Mis emociones no son una nota. Observo cómo cambian.",
+      "number": 2
+    },
+    {
+      "id": "protagonista",
+      "label": "Soy protagonista",
+      "icon": "ball",
+      "title": "Me atrevo a jugar.",
+      "subtitle": "Mis decisiones y mis intentos también cuentan.",
+      "number": 3
+    },
+    {
+      "id": "reinicio",
+      "label": "Mi reinicio",
+      "icon": "reset",
+      "title": "Siguiente jugada.",
+      "subtitle": "Equivocarme también es parte de aprender.",
+      "number": 4
+    },
+    {
+      "id": "aprendizajes",
+      "label": "Mis aprendizajes",
+      "icon": "target",
+      "title": "Un pequeño reto.",
+      "subtitle": "Lo que aprendí hoy me acompaña al próximo partido.",
+      "number": 5
+    },
+    {
+      "id": "espejo",
+      "label": "Mi espejo",
+      "icon": "eye",
+      "title": "Otra mirada me ayuda.",
+      "subtitle": "Dos perspectivas para conocer mi propia historia.",
+      "number": 6
+    }
+  ],
+  "filters": [
+    {
+      "field": "q2",
+      "label": "Equipo",
+      "all": "Todos los equipos"
+    },
+    {
+      "field": "q3",
+      "label": "Torneo",
+      "all": "Todos los torneos"
+    },
+    {
+      "field": "q4",
+      "label": "Formato",
+      "all": "Todos los formatos"
+    },
+    {
+      "field": "q9",
+      "label": "Posición",
+      "all": "Todas las posiciones"
+    }
+  ],
+  "periods": [
+    {
+      "label": "Toda mi historia",
+      "count": null
+    },
+    {
+      "label": "Últimos 10 partidos",
+      "count": 10
+    },
+    {
+      "label": "Últimos 28 partidos",
+      "count": 28
+    }
+  ],
+  "overviewFields": [
+    "q16",
+    "q18",
+    "q19"
+  ],
+  "learningTabs": [
+    {
+      "id": "practice",
+      "label": "Lo que practico",
+      "fields": [
+        "q29",
+        "q30",
+        "q31"
+      ]
+    },
+    {
+      "id": "plays",
+      "label": "Mis jugadas",
+      "fields": [
+        "q32",
+        "q33",
+        "q34",
+        "q35",
+        "q36",
+        "q37"
+      ]
+    },
+    {
+      "id": "missions",
+      "label": "Mi próxima misión",
+      "fields": [
+        "q38"
+      ]
+    },
+    {
+      "id": "penalties",
+      "label": "Penales",
+      "fields": [
+        "q39",
+        "q40",
+        "q41",
+        "q42",
+        "q43",
+        "q44",
+        "q45",
+        "q46",
+        "q47",
+        "q48",
+        "q49"
+      ]
+    }
+  ],
+  "statusLabels": {
+    "VALID": "Respuesta válida",
+    "MISSING": "Sin respuesta",
+    "NOT_OBSERVED": "No observado · N/O",
+    "NOT_APPLICABLE": "No aplica",
+    "INVALID": "Revisar respuesta"
+  },
+  "texts": {
+    "demo": "DATOS SIMULADOS",
+    "demoDetail": "Prueba local · perfil y acceso simulados",
+    "loginTitle": "Entrar a mi aventura",
+    "loginIntro": "Descubro qué intenté, cómo me sentí y qué quiero practicar. Me comparo con mi propia historia.",
+    "privacy": "Mis datos son privados",
+    "insufficient": "Datos insuficientes para mostrar evolución",
+    "onePoint": "Aún no hay evolución suficiente",
+    "fullAdventure": "Mi aventura completa",
+    "timestampNote": "La fecha corresponde al envío del formulario; puede ser distinta a la del partido.",
+    "neutral": "Ganar, perder o sentir nervios no cambia mis XP.",
+    "noData": "Todavía no hay respuestas para esta selección.",
+    "privateBlocked": "Acceso familiar pendiente de configurar. Un adulto debe conectar la API privada y autorizar la hoja.",
+    "demoOnly": "Esta prueba no conecta con Google Sheets ni representa el historial real.",
+    "source": "Google Sheets · lectura al entrar",
+    "footer": "Un pequeño paso hoy, otro mañana."
+  }
+}
