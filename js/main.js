@@ -23,7 +23,7 @@ async function init(){
   router=createRouter(c.ui.screens.map(s=>s.id),page=>{state.screen=page;render();document.querySelector('h1')?.focus({preventScroll:true});window.scrollTo(0,0);});
   showLogin();
   if('serviceWorker' in navigator && (location.protocol==='https:'||['localhost','127.0.0.1'].includes(location.hostname))){navigator.serviceWorker.register('service-worker.js').then(()=>navigator.serviceWorker.ready).then(async()=>{
-    const cachesForApp=(await caches.keys()).filter(key=>key.startsWith('ssr11-shell-'));
+    const cachesForApp=(await caches.keys()).filter(key=>(key.startsWith('ssr11-shell-')||key.startsWith('siguiente-jugada-shell-')));
     const paths=(await Promise.all(cachesForApp.map(async key=>(await (await caches.open(key)).keys()).map(r=>new URL(r.url).pathname)))).flat();
     const clean=paths.every(path=>!path.includes('/__test/')&&!path.endsWith('/data')&&!path.includes('/fixtures/')&&!path.endsWith('.xlsx')&&!path.endsWith('/data-source.json'));
     document.body.dataset.pwa=clean?'ready-public-shell':'cache-audit-failed';
@@ -98,4 +98,4 @@ document.addEventListener('change',event=>{
 window.addEventListener('pagehide',()=>{if(store){store.logout();clearCharts();state=null;dialogState=null;dialog.innerHTML='';app.innerHTML='';}});
 window.addEventListener('pageshow',e=>{if(e.persisted)location.reload();});
 window.addEventListener('offline',()=>{if(state){const notice=app.querySelector('.notice');notice.textContent='Sin conexión · ves la lectura de esta sesión, no datos nuevos.';}});
-init().catch(()=>{app.innerHTML='<main class="boot"><p>No se pudo cargar la interfaz. Comprueba que el servidor local esté funcionando.</p></main>';});
+init().catch(()=>{app.innerHTML='<main class="boot"><p>No se pudo cargar la interfaz. Comprueba la conexión con el sitio.</p></main>';});
