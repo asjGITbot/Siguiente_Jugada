@@ -1,0 +1,2097 @@
+{
+  "version": "V04.1.0",
+  "questionCount": 54,
+  "columnCount": 60,
+  "catalogStatus": "VERIFIED_PDF",
+  "source": {
+    "name": "¡SUBE DE NIVEL!_v4 - Formularios de Google.pdf",
+    "sha256": "2ceff63e82744ffd99f73b97dc32fba85f1978df590b554234b30ec57a50ea4a",
+    "pages": 21,
+    "headers": "Prompt V1.0.1, Anexo A; J alias contrastado con PDF",
+    "dependencyStatus": "Contextual policies from brief; PDF does not certify live Forms branching"
+  },
+  "normalization": {
+    "unicode": "NFC",
+    "trim": true,
+    "collapseWhitespace": true,
+    "ignoreEmojiVariationSelector": true,
+    "caseSensitive": true,
+    "timestampConvention": "MDY; Excel serial base 1899-12-30; wall clock America/Lima (-05:00)",
+    "statuses": [
+      "VALID",
+      "MISSING",
+      "NOT_OBSERVED",
+      "NOT_APPLICABLE",
+      "INVALID"
+    ]
+  },
+  "sections": [
+    {
+      "id": "partido",
+      "label": "Mi partido",
+      "screen": "aventura",
+      "range": [
+        1,
+        13
+      ]
+    },
+    {
+      "id": "emociones",
+      "label": "Mi mundo interior",
+      "screen": "emociones",
+      "range": [
+        14,
+        18
+      ]
+    },
+    {
+      "id": "protagonista",
+      "label": "Modo protagonista",
+      "screen": "protagonista",
+      "range": [
+        19,
+        24
+      ]
+    },
+    {
+      "id": "reinicio",
+      "label": "Superpoder de reinicio",
+      "screen": "reinicio",
+      "range": [
+        25,
+        28
+      ]
+    },
+    {
+      "id": "aprendizajes",
+      "label": "Mi jugada y mi próximo reto",
+      "screen": "aprendizajes",
+      "range": [
+        29,
+        38
+      ]
+    },
+    {
+      "id": "penales",
+      "label": "El desafío de los penales",
+      "screen": "aprendizajes",
+      "range": [
+        39,
+        49
+      ]
+    },
+    {
+      "id": "espejo",
+      "label": "La mirada del observador",
+      "screen": "espejo",
+      "range": [
+        50,
+        54
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "q1",
+      "number": 1,
+      "fields": [
+        "q1"
+      ]
+    },
+    {
+      "id": "q2",
+      "number": 2,
+      "fields": [
+        "q2"
+      ]
+    },
+    {
+      "id": "q3",
+      "number": 3,
+      "fields": [
+        "q3"
+      ]
+    },
+    {
+      "id": "q4",
+      "number": 4,
+      "fields": [
+        "q4"
+      ]
+    },
+    {
+      "id": "q5",
+      "number": 5,
+      "fields": [
+        "q5"
+      ]
+    },
+    {
+      "id": "q6",
+      "number": 6,
+      "fields": [
+        "q6"
+      ]
+    },
+    {
+      "id": "q7",
+      "number": 7,
+      "fields": [
+        "q7"
+      ]
+    },
+    {
+      "id": "q8",
+      "number": 8,
+      "fields": [
+        "q8"
+      ]
+    },
+    {
+      "id": "q9",
+      "number": 9,
+      "fields": [
+        "q9"
+      ]
+    },
+    {
+      "id": "q10",
+      "number": 10,
+      "fields": [
+        "q10"
+      ]
+    },
+    {
+      "id": "q11",
+      "number": 11,
+      "fields": [
+        "q11"
+      ]
+    },
+    {
+      "id": "q12",
+      "number": 12,
+      "fields": [
+        "q12"
+      ]
+    },
+    {
+      "id": "q13",
+      "number": 13,
+      "fields": [
+        "q13"
+      ]
+    },
+    {
+      "id": "q14",
+      "number": 14,
+      "fields": [
+        "q14"
+      ]
+    },
+    {
+      "id": "q15",
+      "number": 15,
+      "fields": [
+        "q15"
+      ]
+    },
+    {
+      "id": "q16",
+      "number": 16,
+      "fields": [
+        "q16"
+      ]
+    },
+    {
+      "id": "q17",
+      "number": 17,
+      "fields": [
+        "q17"
+      ]
+    },
+    {
+      "id": "q18",
+      "number": 18,
+      "fields": [
+        "q18"
+      ]
+    },
+    {
+      "id": "q19",
+      "number": 19,
+      "fields": [
+        "q19"
+      ]
+    },
+    {
+      "id": "q20",
+      "number": 20,
+      "fields": [
+        "q20"
+      ]
+    },
+    {
+      "id": "q21",
+      "number": 21,
+      "fields": [
+        "q21"
+      ]
+    },
+    {
+      "id": "q22",
+      "number": 22,
+      "fields": [
+        "q22"
+      ]
+    },
+    {
+      "id": "q23",
+      "number": 23,
+      "fields": [
+        "q23"
+      ]
+    },
+    {
+      "id": "q24",
+      "number": 24,
+      "fields": [
+        "q24"
+      ]
+    },
+    {
+      "id": "q25",
+      "number": 25,
+      "fields": [
+        "q25"
+      ]
+    },
+    {
+      "id": "q26",
+      "number": 26,
+      "fields": [
+        "q26"
+      ]
+    },
+    {
+      "id": "q27",
+      "number": 27,
+      "fields": [
+        "q27"
+      ]
+    },
+    {
+      "id": "q28",
+      "number": 28,
+      "fields": [
+        "q28"
+      ]
+    },
+    {
+      "id": "q29",
+      "number": 29,
+      "fields": [
+        "q29"
+      ]
+    },
+    {
+      "id": "q30",
+      "number": 30,
+      "fields": [
+        "q30"
+      ]
+    },
+    {
+      "id": "q31",
+      "number": 31,
+      "fields": [
+        "q31"
+      ]
+    },
+    {
+      "id": "q32",
+      "number": 32,
+      "fields": [
+        "q32"
+      ]
+    },
+    {
+      "id": "q33",
+      "number": 33,
+      "fields": [
+        "q33"
+      ]
+    },
+    {
+      "id": "q34",
+      "number": 34,
+      "fields": [
+        "q34"
+      ]
+    },
+    {
+      "id": "q35",
+      "number": 35,
+      "fields": [
+        "q35"
+      ]
+    },
+    {
+      "id": "q36",
+      "number": 36,
+      "fields": [
+        "q36"
+      ]
+    },
+    {
+      "id": "q37",
+      "number": 37,
+      "fields": [
+        "q37"
+      ]
+    },
+    {
+      "id": "q38",
+      "number": 38,
+      "fields": [
+        "q38"
+      ]
+    },
+    {
+      "id": "q39",
+      "number": 39,
+      "fields": [
+        "q39"
+      ]
+    },
+    {
+      "id": "q40",
+      "number": 40,
+      "fields": [
+        "q40"
+      ]
+    },
+    {
+      "id": "q41",
+      "number": 41,
+      "fields": [
+        "q41"
+      ]
+    },
+    {
+      "id": "q42",
+      "number": 42,
+      "fields": [
+        "q42"
+      ]
+    },
+    {
+      "id": "q43",
+      "number": 43,
+      "fields": [
+        "q43"
+      ]
+    },
+    {
+      "id": "q44",
+      "number": 44,
+      "fields": [
+        "q44"
+      ]
+    },
+    {
+      "id": "q45",
+      "number": 45,
+      "fields": [
+        "q45"
+      ]
+    },
+    {
+      "id": "q46",
+      "number": 46,
+      "fields": [
+        "q46"
+      ]
+    },
+    {
+      "id": "q47",
+      "number": 47,
+      "fields": [
+        "q47"
+      ]
+    },
+    {
+      "id": "q48",
+      "number": 48,
+      "fields": [
+        "q48"
+      ]
+    },
+    {
+      "id": "q49",
+      "number": 49,
+      "fields": [
+        "q49"
+      ]
+    },
+    {
+      "id": "q50",
+      "number": 50,
+      "fields": [
+        "q50"
+      ]
+    },
+    {
+      "id": "q51",
+      "number": 51,
+      "fields": [
+        "q51"
+      ]
+    },
+    {
+      "id": "q52",
+      "number": 52,
+      "fields": [
+        "q52"
+      ]
+    },
+    {
+      "id": "q53",
+      "number": 53,
+      "fields": [
+        "q53.buscoparticipar",
+        "q53.seatrevio",
+        "q53.intensidad",
+        "q53.decidio",
+        "q53.desmarque",
+        "q53.pidioclaramente"
+      ]
+    },
+    {
+      "id": "q54",
+      "number": 54,
+      "fields": [
+        "q54"
+      ]
+    }
+  ],
+  "fields": [
+    {
+      "id": "timestamp",
+      "questionId": null,
+      "column": "A",
+      "index": 0,
+      "header": "Marca temporal",
+      "type": "timestamp",
+      "shortTitle": "Fecha de envío",
+      "aliases": []
+    },
+    {
+      "id": "q1",
+      "questionId": "q1",
+      "column": "B",
+      "index": 1,
+      "header": "👤 ¿Quién eres?",
+      "aliases": [],
+      "shortTitle": "Quién juega",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Salvador S"
+      ],
+      "sourcePage": 1,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q2",
+      "questionId": "q2",
+      "column": "C",
+      "index": 2,
+      "header": "👕 ¿Con qué equipo jugaste?",
+      "aliases": [],
+      "shortTitle": "Mi equipo",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "U VIDU Competitivo",
+        "ADT",
+        "Las Águilas",
+        "Los Reales Alaracos"
+      ],
+      "sourcePage": 1,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q3",
+      "questionId": "q3",
+      "column": "D",
+      "index": 3,
+      "header": "🏆 ¿En qué torneo jugaste?",
+      "aliases": [],
+      "shortTitle": "Mi torneo",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "IDV",
+        "Inti Cup Plata Sur Apertura",
+        "Inti Cup Plata Sur Clausura",
+        "Quri Cup",
+        "Copa Crema Apertura",
+        "Copa Crema Clausura",
+        "Sportmania Internacional",
+        "Inti Cup 2015 Ascenso Oro",
+        "Liga Kids 2026"
+      ],
+      "sourcePage": 2,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q4",
+      "questionId": "q4",
+      "column": "E",
+      "index": 4,
+      "header": "⚽ ¿Qué formato jugaste?",
+      "aliases": [],
+      "shortTitle": "Formato",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "F7",
+        "F9",
+        "F11"
+      ],
+      "sourcePage": 2,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q5",
+      "questionId": "q5",
+      "column": "F",
+      "index": 5,
+      "header": "🥇 ¿En qué división jugaste?",
+      "aliases": [],
+      "shortTitle": "División",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Estándar",
+        "Oro",
+        "Plata",
+        "Bronce",
+        "Lima",
+        "Elite"
+      ],
+      "sourcePage": 3,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q6",
+      "questionId": "q6",
+      "column": "G",
+      "index": 6,
+      "header": "📅 ¿Qué tipo de partido fue?",
+      "aliases": [],
+      "shortTitle": "Fase del partido",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Amistoso",
+        "Fase de grupos",
+        "Octavos de final",
+        "Cuartos de final",
+        "SemiFinal",
+        "Final"
+      ],
+      "sourcePage": 3,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q7",
+      "questionId": "q7",
+      "column": "H",
+      "index": 7,
+      "header": "🆚 ¿Contra quién jugaste?",
+      "aliases": [],
+      "shortTitle": "Mi rival",
+      "type": "text",
+      "section": "partido",
+      "screen": "aventura",
+      "options": null,
+      "sourcePage": 3,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q8",
+      "questionId": "q8",
+      "column": "I",
+      "index": 8,
+      "header": "⏱️ ¿En qué parte del partido jugaste?",
+      "aliases": [],
+      "shortTitle": "Tiempo en cancha",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Primer Tiempo",
+        "Segundo Tiempo",
+        "Ambos Tiempos"
+      ],
+      "sourcePage": 4,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q9",
+      "questionId": "q9",
+      "column": "J",
+      "index": 9,
+      "header": "📍  ¿En qué posición jugaste más?",
+      "aliases": [
+        "📍 ¿En qué posición jugaste más?"
+      ],
+      "shortTitle": "Mi posición",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Arquero",
+        "Lateral derecho",
+        "Defensa central",
+        "Lateral izquierdo",
+        "Volante derecho",
+        "Mediocentro",
+        "Creador de juego (10)",
+        "Volante defensivo",
+        "Volante izquierdo",
+        "Extremo derecho",
+        "Extremo izquierdo",
+        "Delantero"
+      ],
+      "sourcePage": 4,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q10",
+      "questionId": "q10",
+      "column": "K",
+      "index": 10,
+      "header": "🏁 ¿Cómo terminó el tiempo reglamentario?",
+      "aliases": [],
+      "shortTitle": "Resultado declarado",
+      "type": "category",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Ganamos",
+        "Empatamos",
+        "Perdimos",
+        "Ganamos en penales",
+        "Perdimos en penales"
+      ],
+      "sourcePage": 5,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q11",
+      "questionId": "q11",
+      "column": "L",
+      "index": 11,
+      "header": "🔢 ¿Cuántos goles hizo tu equipo?",
+      "aliases": [],
+      "shortTitle": "Goles de mi equipo",
+      "type": "integer",
+      "section": "partido",
+      "screen": "aventura",
+      "options": null,
+      "sourcePage": 5,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 0,
+      "max": null
+    },
+    {
+      "id": "q12",
+      "questionId": "q12",
+      "column": "M",
+      "index": 12,
+      "header": "🥅 ¿Cuántos goles hizo el rival?",
+      "aliases": [],
+      "shortTitle": "Goles del rival",
+      "type": "integer",
+      "section": "partido",
+      "screen": "aventura",
+      "options": null,
+      "sourcePage": 5,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 0,
+      "max": null
+    },
+    {
+      "id": "q13",
+      "questionId": "q13",
+      "column": "N",
+      "index": 13,
+      "header": "👨‍👩‍👦 ¿Quién fue a verte jugar?",
+      "aliases": [],
+      "shortTitle": "Quién me acompañó",
+      "type": "multi",
+      "section": "partido",
+      "screen": "aventura",
+      "options": [
+        "Papá",
+        "Mamá",
+        "Abuelos",
+        "Tíos",
+        "Hermanos",
+        "Nadie de mi familia"
+      ],
+      "sourcePage": 5,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q14",
+      "questionId": "q14",
+      "column": "O",
+      "index": 14,
+      "header": "😟 ¿Qué fue lo que más te preocupó hoy?",
+      "aliases": [],
+      "shortTitle": "Qué me preocupó",
+      "type": "category",
+      "section": "emociones",
+      "screen": "emociones",
+      "options": [
+        "Equivocarme",
+        "Perder la pelota",
+        "Que me hagan gol",
+        "Que me cambien",
+        "Que se burlen de mí",
+        "No me preocupó nada"
+      ],
+      "sourcePage": 6,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q15",
+      "questionId": "q15",
+      "column": "P",
+      "index": 15,
+      "header": "🌡️ ¿Cuánto te preocupó?",
+      "aliases": [],
+      "shortTitle": "Preocupación",
+      "type": "scale",
+      "section": "emociones",
+      "screen": "emociones",
+      "options": null,
+      "sourcePage": 6,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": "q16",
+      "questionId": "q16",
+      "column": "Q",
+      "index": 16,
+      "header": "😎 ¿Cuánta confianza sentiste jugando?",
+      "aliases": [],
+      "shortTitle": "Confianza",
+      "type": "scale",
+      "section": "emociones",
+      "screen": "emociones",
+      "options": null,
+      "sourcePage": 6,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": "q17",
+      "questionId": "q17",
+      "column": "R",
+      "index": 17,
+      "header": "😍 ¿Qué disfrutaste más del partido?",
+      "aliases": [],
+      "shortTitle": "Lo que más disfruté",
+      "type": "category",
+      "section": "emociones",
+      "screen": "emociones",
+      "options": [
+        "Regatear",
+        "Pasar",
+        "Defender",
+        "Atacar",
+        "Atajar",
+        "Jugar con mis amigos",
+        "Competir",
+        "Patear al arco"
+      ],
+      "sourcePage": 7,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q18",
+      "questionId": "q18",
+      "column": "S",
+      "index": 18,
+      "header": "🎉 ¿Cuánto disfrutaste jugando hoy?",
+      "aliases": [],
+      "shortTitle": "Disfrute",
+      "type": "scale",
+      "section": "emociones",
+      "screen": "emociones",
+      "options": null,
+      "sourcePage": 7,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": "q19",
+      "questionId": "q19",
+      "column": "T",
+      "index": 19,
+      "header": "🙋 ¿Cuánto buscaste el balón para participar?",
+      "aliases": [],
+      "shortTitle": "Busqué el balón",
+      "type": "ordinal",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "Casi nunca lo busqué",
+        "Participé cuando me llegaba",
+        "Algunas veces lo fui a buscar",
+        "Muchas veces me ofrecí",
+        "Busqué participar constantemente"
+      ],
+      "sourcePage": 8,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q20",
+      "questionId": "q20",
+      "column": "U",
+      "index": 20,
+      "header": "🦁 ¿Qué hiciste cuando apareció una oportunidad difícil?",
+      "aliases": [],
+      "shortTitle": "Me atreví",
+      "type": "ordinal",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "No me atreví",
+        "Dudé y no lo intenté",
+        "Lo intenté algunas veces",
+        "Me atreví cuando convenía",
+        "Actué con decisión y busqué más oportunidades"
+      ],
+      "sourcePage": 8,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q21",
+      "questionId": "q21",
+      "column": "V",
+      "index": 21,
+      "header": "⚡ ¿Cómo competiste por los balones?",
+      "aliases": [],
+      "shortTitle": "Competí",
+      "type": "ordinal",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "Evité muchos duelos",
+        "Me costó disputarlos",
+        "Competí algunas veces",
+        "Disputé casi todos con ganas",
+        "Competí con decisión durante todo mi tiempo de juego"
+      ],
+      "sourcePage": 8,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q22",
+      "questionId": "q22",
+      "column": "W",
+      "index": 22,
+      "header": "🧠 ¿Cómo tomaste tus decisiones?",
+      "aliases": [],
+      "shortTitle": "Decidí por mí",
+      "type": "ordinal",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "Esperé muchas instrucciones",
+        "Dudé demasiado",
+        "Algunas veces decidí solo",
+        "Decidí según lo que veía",
+        "Leí el juego y actué con autonomía"
+      ],
+      "sourcePage": 9,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q23",
+      "questionId": "q23",
+      "column": "X",
+      "index": 23,
+      "header": "🙋 ¿Qué hiciste para intentar recibir el balón?",
+      "aliases": [],
+      "shortTitle": "Cómo pedí el balón",
+      "type": "category",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "No encontré espacio para recibir.",
+        "Estuve libre, pero no pedí el balón.",
+        "Pedí el balón con la voz.",
+        "Pedí el balón con una señal.",
+        "Pedí el balón con la voz y una señal."
+      ],
+      "sourcePage": 9,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q24",
+      "questionId": "q24",
+      "column": "Y",
+      "index": 24,
+      "header": "⚽ Durante el partido, ¿qué pasó cuando intentaste recibir un pase?",
+      "aliases": [],
+      "shortTitle": "Qué pasó con el pase",
+      "type": "category",
+      "section": "protagonista",
+      "screen": "protagonista",
+      "options": [
+        "No estuve libre para recibir.",
+        "Estuve libre, pero no pedí el balón.",
+        "Siempre o casi siempre me lo pasaron.",
+        "Algunas veces me lo pasaron.",
+        "Casi nunca me lo pasaron.",
+        "Nunca me lo pasaron."
+      ],
+      "sourcePage": 9,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q25",
+      "questionId": "q25",
+      "column": "Z",
+      "index": 25,
+      "header": "😵 ¿Cometiste algún error que te molestó?",
+      "aliases": [],
+      "shortTitle": "Hubo un error que me molestó",
+      "type": "category",
+      "section": "reinicio",
+      "screen": "reinicio",
+      "options": [
+        "Sí",
+        "No"
+      ],
+      "sourcePage": 10,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q26",
+      "questionId": "q26",
+      "column": "AA",
+      "index": 26,
+      "header": "🔄 ¿Qué hiciste después de ese error?",
+      "aliases": [],
+      "shortTitle": "Qué hice después",
+      "type": "multi",
+      "section": "reinicio",
+      "screen": "reinicio",
+      "options": [
+        "Respiré para tranquilizarme.",
+        "Me dije «¡Siguiente jugada!».",
+        "Corrí para recuperar el balón.",
+        "Pedí nuevamente la pelota.",
+        "Seguí jugando normalmente.",
+        "Me quedé pensando en el error.",
+        "Me molesté",
+        "Me puse triste.",
+        "Aplaudí"
+      ],
+      "sourcePage": 10,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q25",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_ERROR"
+      }
+    },
+    {
+      "id": "q27",
+      "questionId": "q27",
+      "column": "AB",
+      "index": 27,
+      "header": "⏱️ ¿Cuánto tardaste en volver a concentrarte?",
+      "aliases": [],
+      "shortTitle": "Volví a concentrarme",
+      "type": "ordinal",
+      "section": "reinicio",
+      "screen": "reinicio",
+      "options": [
+        "No conseguí volver a concentrarme.",
+        "Me costó casi todo el partido.",
+        "Después de algunos minutos.",
+        "En la siguiente jugada.",
+        "Inmediatamente."
+      ],
+      "sourcePage": 10,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q25",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_ERROR"
+      }
+    },
+    {
+      "id": "q28",
+      "questionId": "q28",
+      "column": "AC",
+      "index": 28,
+      "header": "💪 ¿Te atreviste a volver a intentarlo?",
+      "aliases": [],
+      "shortTitle": "Volví a intentarlo",
+      "type": "ordinal",
+      "section": "reinicio",
+      "screen": "reinicio",
+      "options": [
+        "No, dejé de intentarlo.",
+        "Quería hacerlo, pero tuve miedo.",
+        "Lo intenté con dudas.",
+        "Sí, volví a intentarlo.",
+        "Sí, y seguí buscando oportunidades."
+      ],
+      "sourcePage": 11,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q25",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_ERROR"
+      }
+    },
+    {
+      "id": "q29",
+      "questionId": "q29",
+      "column": "AD",
+      "index": 29,
+      "header": "🔍 ¿Qué fue lo que más intentaste mejorar hoy?",
+      "aliases": [],
+      "shortTitle": "Lo que practiqué",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Pase",
+        "Control",
+        "Regate",
+        "Tiro al Arco",
+        "Defender",
+        "Comunicación",
+        "Atajada"
+      ],
+      "sourcePage": 11,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q30",
+      "questionId": "q30",
+      "column": "AE",
+      "index": 30,
+      "header": "📈 ¿Cómo crees que te salió?",
+      "aliases": [],
+      "shortTitle": "Cómo me salió",
+      "type": "scale",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 11,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5
+    },
+    {
+      "id": "q31",
+      "questionId": "q31",
+      "column": "AF",
+      "index": 31,
+      "header": "💡 ¿Qué aprendiste hoy?",
+      "aliases": [],
+      "shortTitle": "Lo que aprendí",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Mirar antes de actuar",
+        "Hablar más",
+        "Moverme más",
+        "Confiar más",
+        "Jugar simple cuando conviene",
+        "Concentrarme mejor",
+        "Atreverme a intentar",
+        "Recuperarme después de un error"
+      ],
+      "sourcePage": 12,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q32",
+      "questionId": "q32",
+      "column": "AG",
+      "index": 32,
+      "header": "🌟 ¿Recuerdas una jugada importante en la que participaste?",
+      "aliases": [],
+      "shortTitle": "Mi jugada importante",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Sí",
+        "No"
+      ],
+      "sourcePage": 12,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q33",
+      "questionId": "q33",
+      "column": "AH",
+      "index": 33,
+      "header": "⚽ ¿Qué tipo de jugada fue?",
+      "aliases": [],
+      "shortTitle": "Tipo de jugada",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Penal",
+        "Tiro libre",
+        "Ocasión clara de gol",
+        "Gol",
+        "Asistencia",
+        "Atajada importante",
+        "Error que terminó en gol rival",
+        "Recuperación importante",
+        "Pase clave",
+        "Acción defensiva importante"
+      ],
+      "sourcePage": 13,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q32",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_PLAY"
+      }
+    },
+    {
+      "id": "q34",
+      "questionId": "q34",
+      "column": "AI",
+      "index": 34,
+      "header": "🎬 ¿Cómo terminó la jugada?",
+      "aliases": [],
+      "shortTitle": "Desenlace",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Gol",
+        "Asistencia",
+        "Atajada",
+        "Al palo",
+        "Fuera",
+        "Atajado por el arquero",
+        "Bloqueado",
+        "Recuperación exitosa",
+        "Pérdida del balón",
+        "Terminó en gol rival",
+        "No terminó como quería"
+      ],
+      "sourcePage": 14,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q32",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_PLAY"
+      }
+    },
+    {
+      "id": "q35",
+      "questionId": "q35",
+      "column": "AJ",
+      "index": 35,
+      "header": "😬 ¿Cuántos nervios sentiste justo antes?",
+      "aliases": [],
+      "shortTitle": "Nervios antes de la jugada",
+      "type": "scale",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 14,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "dependency": {
+        "field": "q32",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_PLAY"
+      }
+    },
+    {
+      "id": "q36",
+      "questionId": "q36",
+      "column": "AK",
+      "index": 36,
+      "header": "😎 ¿Qué tanta confianza sentiste antes de ejecutar?",
+      "aliases": [],
+      "shortTitle": "Confianza antes de la jugada",
+      "type": "scale",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 14,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "dependency": {
+        "field": "q32",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_PLAY"
+      }
+    },
+    {
+      "id": "q37",
+      "questionId": "q37",
+      "column": "AL",
+      "index": 37,
+      "header": "🎯 ¿Qué influyó más en el resultado de esa jugada?",
+      "aliases": [],
+      "shortTitle": "Qué influyó",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "Me resbalé",
+        "Perdí el equilibrio",
+        "Mala ejecución técnica",
+        "Elegí mal dónde patear",
+        "El arquero hizo una gran atajada",
+        "El rival me presionó",
+        "Mala suerte (poste, rebote, etc.)",
+        "El campo estaba en malas condiciones",
+        "No estaba concentrado",
+        "Estaba nervioso",
+        "Fue una buena jugada, aunque no terminó bien"
+      ],
+      "sourcePage": 15,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q32",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_PLAY"
+      }
+    },
+    {
+      "id": "q38",
+      "questionId": "q38",
+      "column": "AM",
+      "index": 38,
+      "header": "🚀 ¿Cuál será tu misión para el próximo partido?",
+      "aliases": [],
+      "shortTitle": "Mi próxima misión",
+      "type": "category",
+      "section": "aprendizajes",
+      "screen": "aprendizajes",
+      "options": [
+        "🙋 Pedir más el balón.",
+        "🦁 Atreverme a encarar cuando convenga.",
+        "⚡ Competir mejor en los duelos.",
+        "🧠 Decidir más rápido.",
+        "🔄 Recuperarme antes de los errores.",
+        "👀 Mirar más antes de recibir.",
+        "🤝 Comunicarme más con mi equipo.",
+        "🎯 Mejorar una habilidad técnica.",
+        "⭐ Elegir otro desafío."
+      ],
+      "sourcePage": 15,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q39",
+      "questionId": "q39",
+      "column": "AN",
+      "index": 39,
+      "header": "🥅 ¿El partido terminó con una tanda de penales?",
+      "aliases": [],
+      "shortTitle": "Hubo tanda de penales",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Sí",
+        "No"
+      ],
+      "sourcePage": 16,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q40",
+      "questionId": "q40",
+      "column": "AO",
+      "index": 40,
+      "header": "🏆 ¿Cómo terminó la tanda de penales?",
+      "aliases": [],
+      "shortTitle": "Resultado de la tanda",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Ganamos",
+        "Perdimos"
+      ],
+      "sourcePage": 16,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q41",
+      "questionId": "q41",
+      "column": "AP",
+      "index": 41,
+      "header": "🔢 ¿Cuántos penales convirtió tu equipo?",
+      "aliases": [],
+      "shortTitle": "Penales de mi equipo",
+      "type": "integer",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 16,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 0,
+      "max": null,
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q42",
+      "questionId": "q42",
+      "column": "AQ",
+      "index": 42,
+      "header": "🔢 ¿Cuántos penales convirtió el rival?",
+      "aliases": [],
+      "shortTitle": "Penales del rival",
+      "type": "integer",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 16,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 0,
+      "max": null,
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q43",
+      "questionId": "q43",
+      "column": "AR",
+      "index": 43,
+      "header": "🙋 ¿Qué hiciste durante la tanda?",
+      "aliases": [],
+      "shortTitle": "Mi papel en la tanda",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Pateé un penal",
+        "Animé a mis compañeros, pero no participé",
+        "Fui arquero",
+        "Pateé y también fui arquero"
+      ],
+      "sourcePage": 17,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q44",
+      "questionId": "q44",
+      "column": "AS",
+      "index": 44,
+      "header": "🦁 ¿Cómo afrontaste la posibilidad de patear un penal?",
+      "aliases": [],
+      "shortTitle": "Cómo la afronté",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Me ofrecí voluntariamente",
+        "El entrenador me eligió y acepté",
+        "Me eligieron, pero tuve muchas dudas",
+        "Preferí no patear",
+        "No me tocó patear"
+      ],
+      "sourcePage": 17,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q45",
+      "questionId": "q45",
+      "column": "AT",
+      "index": 45,
+      "header": "😎 ¿Cuánta confianza sentiste antes de participar?",
+      "aliases": [],
+      "shortTitle": "Confianza en la tanda",
+      "type": "scale",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 17,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q46",
+      "questionId": "q46",
+      "column": "AU",
+      "index": 46,
+      "header": "😬 ¿Cuántos nervios sentiste antes de participar?",
+      "aliases": [],
+      "shortTitle": "Nervios en la tanda",
+      "type": "scale",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": null,
+      "sourcePage": 17,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q47",
+      "questionId": "q47",
+      "column": "AV",
+      "index": 47,
+      "header": "⚽ ¿Qué pasó cuando ejecutaste o defendiste el penal?",
+      "aliases": [],
+      "shortTitle": "Qué pasó con mi penal",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Marqué el penal",
+        "El arquero lo atajó",
+        "Lo envié fuera",
+        "Pegó en el poste",
+        "Atajé el penal",
+        "No logré atajarlo",
+        "No participé directamente"
+      ],
+      "sourcePage": 18,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q48",
+      "questionId": "q48",
+      "column": "AW",
+      "index": 48,
+      "header": "🔄 ¿Cómo reaccionaste después del penal?",
+      "aliases": [],
+      "shortTitle": "Cómo reaccioné",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Seguí tranquilo y concentrado",
+        "Animé a mis compañeros",
+        "Me sentí orgulloso de haberlo intentado",
+        "Me frustré, pero logré recuperarme",
+        "Me costó mucho superar lo sucedido",
+        "No participé directamente"
+      ],
+      "sourcePage": 18,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q49",
+      "questionId": "q49",
+      "column": "AX",
+      "index": 49,
+      "header": "💡 ¿Qué aprendiste de la tanda de penales?",
+      "aliases": [],
+      "shortTitle": "Lo que me enseñó la tanda",
+      "type": "category",
+      "section": "penales",
+      "screen": "aprendizajes",
+      "options": [
+        "Confiar en mí",
+        "Mantener la calma",
+        "Decidir dónde patear",
+        "Concentrarme antes de actuar",
+        "Aceptar el resultado",
+        "Animar a mis compañeros",
+        "Practicar más los penales"
+      ],
+      "sourcePage": 19,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "dependency": {
+        "field": "q39",
+        "equals": "Sí",
+        "policy": "CONTEXTUAL_NO_SHOOTOUT"
+      }
+    },
+    {
+      "id": "q50",
+      "questionId": "q50",
+      "column": "AY",
+      "index": 50,
+      "header": "👤 ¿Quién realiza esta evaluación?",
+      "aliases": [],
+      "shortTitle": "Quién me observó",
+      "type": "category",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": [
+        "Papá",
+        "Mamá",
+        "Entrenador"
+      ],
+      "sourcePage": 19,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q51",
+      "questionId": "q51",
+      "column": "AZ",
+      "index": 51,
+      "header": "🌟 ¿Qué hizo especialmente bien hoy?",
+      "aliases": [],
+      "shortTitle": "Mis fortalezas",
+      "type": "multi",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": [
+        "Pase",
+        "Control",
+        "Regate",
+        "Tiro al arco",
+        "Marcaje",
+        "Lectura de juego",
+        "Confianza",
+        "Concentración",
+        "Comunicación",
+        "Reset / Reacción al error",
+        "Iniciativa / Atrevido para jugar",
+        "Ataque",
+        "Intensidad",
+        "Juego colectivo"
+      ],
+      "sourcePage": 20,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q52",
+      "questionId": "q52",
+      "column": "BA",
+      "index": 52,
+      "header": "🛠️ ¿Qué necesita seguir trabajando?",
+      "aliases": [],
+      "shortTitle": "Lo que puedo practicar",
+      "type": "multi",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": [
+        "Pase",
+        "Control",
+        "Regate",
+        "Tiro al arco",
+        "Marcaje",
+        "Lectura de juego",
+        "Confianza",
+        "Concentración",
+        "Comunicación",
+        "Reset / Reacción al error",
+        "Iniciativa / Atrevido para jugar",
+        "Ataque",
+        "Intensidad",
+        "Juego colectivo"
+      ],
+      "sourcePage": 20,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ]
+    },
+    {
+      "id": "q53.buscoparticipar",
+      "questionId": "q53",
+      "column": "BB",
+      "index": 53,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Buscó participar]",
+      "aliases": [],
+      "shortTitle": "Buscó participar",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q53.seatrevio",
+      "questionId": "q53",
+      "column": "BC",
+      "index": 54,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Se atrevió a jugar]",
+      "aliases": [],
+      "shortTitle": "Se atrevió a jugar",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q53.intensidad",
+      "questionId": "q53",
+      "column": "BD",
+      "index": 55,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Compitió con intensidad]",
+      "aliases": [],
+      "shortTitle": "Compitió con intensidad",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q53.decidio",
+      "questionId": "q53",
+      "column": "BE",
+      "index": 56,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Decidió por sí mismo]",
+      "aliases": [],
+      "shortTitle": "Decidió por sí mismo",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q53.desmarque",
+      "questionId": "q53",
+      "column": "BF",
+      "index": 57,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Se desmarcó para recibir]",
+      "aliases": [],
+      "shortTitle": "Se desmarcó para recibir",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q53.pidioclaramente",
+      "questionId": "q53",
+      "column": "BG",
+      "index": 58,
+      "header": "🔥 ¿Qué comportamientos competitivos mostró hoy? [Pidió el balón claramente]",
+      "aliases": [],
+      "shortTitle": "Pidió el balón claramente",
+      "type": "scale",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "VERIFIED_PDF",
+      "roles": [
+        "player",
+        "parent",
+        "psychologist"
+      ],
+      "min": 1,
+      "max": 5,
+      "notObserved": [
+        "N/O"
+      ]
+    },
+    {
+      "id": "q54",
+      "questionId": "q54",
+      "column": "BH",
+      "index": 59,
+      "header": "🧠 ¿Hay algo importante que debería conocer su psicólogo deportivo?",
+      "aliases": [],
+      "shortTitle": "Nota confidencial",
+      "type": "text",
+      "section": "espejo",
+      "screen": "espejo",
+      "options": null,
+      "sourcePage": 21,
+      "catalogStatus": "NOT_ENUMERATED",
+      "roles": [
+        "parent",
+        "psychologist"
+      ]
+    }
+  ]
+}

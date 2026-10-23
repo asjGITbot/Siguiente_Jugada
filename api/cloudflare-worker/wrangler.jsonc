@@ -1,0 +1,11 @@
+{
+  "name": "ssr11-private-api-sandbox",
+  "main": "worker.js",
+  "compatibility_date": "2026-10-01",
+  "workers_dev": false,
+  "vars": {
+    "APP_ORIGIN": "https://INTERFAZ_AUTORIZADA.example",
+    "ACCESS_TEAM_DOMAIN": "EQUIPO.cloudflareaccess.com",
+    "ACCESS_AUDIENCE": "CONFIGURAR_APPLICATION_AUD"
+  }
+}
