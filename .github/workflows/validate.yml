@@ -20,7 +20,7 @@ jobs:
       - name: Install asset conversion library
         run: python -m pip install 'Pillow>=10,<12'
       - name: Check Worker accounts and Google Sheets authorization
-        run: node --test tests/worker-d1.test.js
+        run: node --test tests/*.test.js
       - name: Build public assets with strict allowlist
         run: python scripts/build-deploy.py
       - name: Confirm no private files are deployed
