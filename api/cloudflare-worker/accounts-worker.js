@@ -160,6 +160,19 @@ async function checkGoogleSheetsConnection(env,io){
   const credentialCodes=new Set(['GOOGLE_CREDENTIALS_MISSING','GOOGLE_CREDENTIALS_JSON_INVALID','GOOGLE_CREDENTIALS_FORMAT_INVALID','GOOGLE_PRIVATE_KEY_INVALID','GOOGLE_JWT_SIGN_FAILED']);
   const oauthCodes=new Set(['GOOGLE_OAUTH_NETWORK_FAILED','GOOGLE_OAUTH_INVALID_GRANT','GOOGLE_OAUTH_INVALID_CLIENT','GOOGLE_OAUTH_UNAUTHORIZED_CLIENT','GOOGLE_OAUTH_INVALID_SCOPE','GOOGLE_OAUTH_INVALID_REQUEST','GOOGLE_OAUTH_HTTP_FAILED','GOOGLE_OAUTH_RESPONSE_INVALID','GOOGLE_OAUTH_NO_ACCESS_TOKEN']);
   const code=credentialCodes.has(e.message)||oauthCodes.has(e.message)?e.message:'GOOGLE_AUTH_UNEXPECTED_ERROR';
+  if(code==='GOOGLE_OAUTH_NETWORK_FAILED'){
+   // Probe only public, fixed Google endpoints. No authorization, tokens, JWTs or row data sent.
+   const probe=async url=>{
+    try{const r=await io.fetch(url,{method:'GET',cache:'no-store'});return Number.isInteger(r.status)&&r.status>0;}
+    catch{return false;}
+   };
+   const tokenReachable=await probe('https://oauth2.googleapis.com/token');
+   const sheetsReachable=await probe('https://sheets.googleapis.com/$discovery/rest?version=v4');
+   const category=!tokenReachable&&!sheetsReachable?'GOOGLE_EGRESS_UNREACHABLE':
+    !tokenReachable?'GOOGLE_OAUTH_HOST_UNREACHABLE':
+    !sheetsReachable?'GOOGLE_OAUTH_POST_TRANSPORT_ERROR':'GOOGLE_OAUTH_POST_TRANSPORT_ERROR';
+   return failCheck('network',category);
+  }
   return failCheck(credentialCodes.has(code)?'credentials':'oauth',code);
  }
  let response;
