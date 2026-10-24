@@ -102,3 +102,41 @@ test('admin diagnostics separate outbound POST failure from Google egress outage
  const closed=await handle(req('/api/admin/diagnostics','GET',null,admin),diagnosticEnv,{fetch:async()=>{throw new Error('No routes');}});
  assert.deepEqual(await closed.json(),{ok:false,stage:'network',code:'GOOGLE_EGRESS_UNREACHABLE'});
 });
+
+test('production Cloudflare fetch keeps the global receiver for Google OAuth and Sheets',async()=>{
+ // Simulates workerd's stricter receiver validation that Node's fetch does not enforce.
+ const originalFetch=globalThis.fetch;
+ const key=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
+ const der=Buffer.from(await crypto.subtle.exportKey('pkcs8',key.privateKey));
+ const pem='-----BEGIN PRIVATE KEY-----\n'+der.toString('base64')+'\n-----END PRIVATE KEY-----';
+ const sourceId='fake-v04-sheet';
+ const schema=JSON.parse(readFileSync(new URL('../config/form-v04.schema.json',import.meta.url),'utf8'));
+ const headers=schema.fields.map(f=>f.header);
+ const liveEnv={
+  ...env,
+  GOOGLE_SERVICE_ACCOUNT_JSON:JSON.stringify({type:'service_account',client_email:'test@demo.iam.gserviceaccount.com',private_key:pem}),
+  GOOGLE_SHEETS_URL:'https://docs.google.com/spreadsheets/d/'+sourceId+'/edit',
+  ALLOWED_SHEETS_JSON:JSON.stringify({[sourceId]:{datasetKind:'REAL',range:"'Respuestas de formulario 1'!A:BH"}})
+ };
+ let oauth=0,sheets=0;
+ globalThis.fetch=async function(url,options){
+  assert.equal(this,globalThis,'workerd rejects global fetch called as an object method');
+  if(url==='https://oauth2.googleapis.com/token'){
+   assert.equal(options?.method,'POST');oauth++;
+   return new Response(JSON.stringify({access_token:'fake-oauth-token'}),{status:200});
+  }
+  if(String(url).startsWith('https://sheets.googleapis.com/v4/spreadsheets/')){
+   assert.equal(options?.headers?.Authorization,'Bearer fake-oauth-token');sheets++;
+   return new Response(JSON.stringify({values:[headers]}),{status:200});
+  }
+  throw new Error('Unexpected external hostname');
+ };
+ try{
+  const response=await handle(req('/api/admin/diagnostics','GET',null,admin),liveEnv);
+  assert.equal(response.status,200);
+  assert.deepEqual(await response.json(),{ok:true,stage:'complete',code:'GOOGLE_SHEETS_READY'});
+  assert.equal(oauth,1);assert.equal(sheets,1);
+ }finally{
+  globalThis.fetch=originalFetch;
+ }
+});
