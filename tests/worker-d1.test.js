@@ -47,6 +47,15 @@ test('temporary password rotated before any Sheets reading',async()=>{
  r=await handle(req('/api/data','POST',{googleSheetsUrl:'https://docs.google.com/spreadsheets/d/NO_PERMISSION/edit'},player),env);
  assert.equal(r.status,403);assert.equal((await r.json()).code,'SHEET_NOT_AUTHORIZED');
 });
+test('private diagnostics are admin-only and never expose private data',async()=>{
+ const r=await handle(req('/api/admin/diagnostics','GET',null,admin),env);
+ assert.equal(r.status,200);
+ const result=await r.json();
+ assert.deepEqual(result,{ok:false,stage:'configuration',code:'SHEETS_URL_MISSING'});
+ assert.equal(JSON.stringify(result).includes(env.BOOTSTRAP_TOKEN),false);
+ const forbidden=await handle(req('/api/admin/diagnostics','GET',null,player),env);
+ assert.equal(forbidden.status,403);
+});
 test('logout revokes cookie, and CSRF origin is denied',async()=>{
  let r=await handle(req('/api/logout','POST',{},player),env);assert.equal(r.status,200);
  r=await handle(req('/api/session','GET',null,player),env);assert.equal(r.status,401);
