@@ -15,6 +15,28 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Verify required Cloudflare deployment credentials
+        env:
+          D1_DATABASE_ID: ${{ secrets.D1_DATABASE_ID }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        shell: bash
+        run: |
+          missing=0
+          for name in D1_DATABASE_ID CLOUDFLARE_ACCOUNT_ID CLOUDFLARE_API_TOKEN; do
+            if [[ -z "${!name}" ]]; then
+              echo "::error title=Missing GitHub secret::${name} must be set under Settings > Secrets and variables > Actions before deploying."
+              missing=1
+            fi
+          done
+          if [[ "$missing" -ne 0 ]]; then
+            echo "::error::Configure all three GitHub Secrets, then rerun the deployment."
+            exit 1
+          fi
+          if [[ ! "$D1_DATABASE_ID" =~ ^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$ ]]; then
+            echo "::error title=Invalid D1 database ID::D1_DATABASE_ID must be a UUID from Cloudflare D1 database details."
+            exit 1
+          fi
       - name: Install asset conversion library
         run: python -m pip install 'Pillow>=10,<12'
       - name: Build safe frontend
