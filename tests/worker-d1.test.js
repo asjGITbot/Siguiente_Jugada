@@ -77,3 +77,28 @@ test('Google OAuth returns narrow error codes and never exposes credentials',asy
  const ok=await googleToken(valid,{now,fetch:async()=>new Response(JSON.stringify({access_token:'test-token'}),{status:200})});
  assert.equal(ok,'test-token');
 });
+
+test('admin diagnostics separate outbound POST failure from Google egress outage',async()=>{
+ const key=await crypto.subtle.generateKey({name:'RSASSA-PKCS1-v1_5',modulusLength:2048,publicExponent:new Uint8Array([1,0,1]),hash:'SHA-256'},true,['sign','verify']);
+ const der=Buffer.from(await crypto.subtle.exportKey('pkcs8',key.privateKey));
+ const pem='-----BEGIN PRIVATE KEY-----\n'+der.toString('base64')+'\n-----END PRIVATE KEY-----';
+ const diagnosticEnv={
+  ...env,
+  GOOGLE_SERVICE_ACCOUNT_JSON:JSON.stringify({type:'service_account',client_email:'test@demo.iam.gserviceaccount.com',private_key:pem}),
+  GOOGLE_SHEETS_URL:'https://docs.google.com/spreadsheets/d/test-doc/edit',
+  ALLOWED_SHEETS_JSON:JSON.stringify({'test-doc':{datasetKind:'REAL',range:"'Respuestas de formulario 1'!A:BH"}})
+ };
+ const partial={fetch:async(url,options)=>{
+  if(url==='https://oauth2.googleapis.com/token'&&options?.method==='POST')throw new Error('Sensitive assertion must never be reflected');
+  if(url==='https://oauth2.googleapis.com/token')return new Response('',{status:405});
+  if(url.startsWith('https://sheets.googleapis.com/'))return new Response('',{status:200});
+  throw new Error('unexpected outbound host');
+ }};
+ const response=await handle(req('/api/admin/diagnostics','GET',null,admin),diagnosticEnv,partial);
+ assert.equal(response.status,200);
+ const diagnostics=await response.json();
+ assert.deepEqual(diagnostics,{ok:false,stage:'network',code:'GOOGLE_OAUTH_POST_TRANSPORT_ERROR'});
+ assert.equal(JSON.stringify(diagnostics).includes('Sensitive assertion'),false);
+ const closed=await handle(req('/api/admin/diagnostics','GET',null,admin),diagnosticEnv,{fetch:async()=>{throw new Error('No routes');}});
+ assert.deepEqual(await closed.json(),{ok:false,stage:'network',code:'GOOGLE_EGRESS_UNREACHABLE'});
+});
