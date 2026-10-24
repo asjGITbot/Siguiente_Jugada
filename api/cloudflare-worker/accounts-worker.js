@@ -190,7 +190,7 @@ async function checkGoogleSheetsConnection(env,io){
 }
 
 const publicErrors=new Set(['SESSION_EXPIRED','PASSWORD_CHANGE_REQUIRED','INVALID_CREDENTIALS','ADMIN_REQUIRED','USERNAME_EXISTS','USERNAME_INVALID','NAME_INVALID','PASSWORD_LENGTH','PASSWORD_MUST_DIFFER','PLAYERS_REQUIRED','PLAYERS_INVALID','ROLE_INVALID','P54_ADULT_ONLY','SELF_ADMIN_PROTECTED','LAST_ADMIN','SETUP_DENIED','TOO_MANY_ATTEMPTS','EXTERNAL_SETUP_REQUIRED','SHEET_NOT_AUTHORIZED','SOURCE_UNAVAILABLE','SCHEMA_HEADERS','ROW_COLUMNS','JSON_REQUIRED','BAD_REQUEST','NOT_FOUND','VIEWER_ACCOUNT_REQUIRED','ORIGIN_DENIED','HTTPS_REQUIRED']);
-export async function handle(request,env,io={fetch:globalThis.fetch}){
+export async function handle(request,env,io={fetch:(...args)=>globalThis.fetch(...args)}){
  const path=new URL(request.url).pathname,origin=new URL(request.url).origin;
  const respond=(data,status=200,extra={})=>new Response(JSON.stringify(data),{status,headers:{...headers,...extra}});
  if(!path.startsWith('/api/')){
