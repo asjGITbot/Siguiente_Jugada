@@ -31,15 +31,37 @@ export async function verifyAccess(token,env,io) {
 }
 
 export async function googleToken(env,io) {
-  if(!env.GOOGLE_SERVICE_ACCOUNT_JSON)fail('EXTERNAL_SETUP_REQUIRED',503);
-  const account=JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_JSON),now=Math.floor(io.now()/1000);
+  // Only stable, non-sensitive error codes escape this function. Never return provider error descriptions.
+  if(!env.GOOGLE_SERVICE_ACCOUNT_JSON)fail('GOOGLE_CREDENTIALS_MISSING',503);
+  let account;
+  try{account=JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_JSON);}catch{fail('GOOGLE_CREDENTIALS_JSON_INVALID',503);}
+  if(account?.type!=='service_account'||typeof account.client_email!=='string'||
+     !account.client_email.endsWith('.iam.gserviceaccount.com')||
+     typeof account.private_key!=='string'||
+     !account.private_key.includes('-----BEGIN PRIVATE KEY-----')||
+     !account.private_key.includes('-----END PRIVATE KEY-----'))fail('GOOGLE_CREDENTIALS_FORMAT_INVALID',503);
+  let key;
+  try{key=await crypto.subtle.importKey('pkcs8',pemBytes(account.private_key),{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['sign']);}
+  catch{fail('GOOGLE_PRIVATE_KEY_INVALID',503);}
+  const now=Math.floor(io.now()/1000);
   const head=encode({alg:'RS256',typ:'JWT'}),body=encode({iss:account.client_email,scope:'https://www.googleapis.com/auth/spreadsheets.readonly',aud:'https://oauth2.googleapis.com/token',iat:now,exp:now+3600});
-  const key=await crypto.subtle.importKey('pkcs8',pemBytes(account.private_key),{name:'RSASSA-PKCS1-v1_5',hash:'SHA-256'},false,['sign']);
-  const signature=await crypto.subtle.sign('RSASSA-PKCS1-v1_5',key,new TextEncoder().encode(head+'.'+body));
+  let signature;
+  try{signature=await crypto.subtle.sign('RSASSA-PKCS1-v1_5',key,new TextEncoder().encode(head+'.'+body));}
+  catch{fail('GOOGLE_JWT_SIGN_FAILED',503);}
   const signed=btoa(String.fromCharCode(...new Uint8Array(signature))).replace(/=/g,'').replace(/\+/g,'-').replace(/\//g,'_');
-  const response=await io.fetch('https://oauth2.googleapis.com/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'urn:ietf:params:oauth:grant-type:jwt-bearer',assertion:head+'.'+body+'.'+signed}),cache:'no-store'});
-  if(!response.ok)fail('SOURCE_UNAVAILABLE',502);
-  const result=await response.json();if(!result.access_token)fail('SOURCE_UNAVAILABLE',502);return result.access_token;
+  let response;
+  try{response=await io.fetch('https://oauth2.googleapis.com/token',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams({grant_type:'urn:ietf:params:oauth:grant-type:jwt-bearer',assertion:head+'.'+body+'.'+signed}),cache:'no-store'});}
+  catch{fail('GOOGLE_OAUTH_NETWORK_FAILED',502);}
+  if(!response.ok){
+    let kind;
+    try{kind=(await response.json()).error;}catch{}
+    const allowed={invalid_grant:'GOOGLE_OAUTH_INVALID_GRANT',invalid_client:'GOOGLE_OAUTH_INVALID_CLIENT',unauthorized_client:'GOOGLE_OAUTH_UNAUTHORIZED_CLIENT',invalid_scope:'GOOGLE_OAUTH_INVALID_SCOPE',invalid_request:'GOOGLE_OAUTH_INVALID_REQUEST'};
+    fail(allowed[kind]||'GOOGLE_OAUTH_HTTP_FAILED',502);
+  }
+  let result;
+  try{result=await response.json();}catch{fail('GOOGLE_OAUTH_RESPONSE_INVALID',502);}
+  if(typeof result?.access_token!=='string'||!result.access_token)fail('GOOGLE_OAUTH_NO_ACCESS_TOKEN',502);
+  return result.access_token;
 }
 
 export function authorizeRows(values,user,kind) {
