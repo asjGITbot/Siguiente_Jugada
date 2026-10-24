@@ -20,7 +20,9 @@ let admin,player;
 test('PBKDF2 has random salt and rejects wrong passwords',async()=>{
  const a=await passwordHash('123456789012AAAA'),b=await passwordHash('123456789012AAAA');
  assert.notEqual(a,b);
- const iterations=Number(a.split('
+ const iterations=Number(a.split(String.fromCharCode(36))[1]);
+ assert.equal(iterations,100000,'Cloudflare Workers rejects PBKDF2 above 100000 iterations');
+ assert(await verifyPassword('123456789012AAAA',a));assert.equal(await verifyPassword('nope!!',a),false);
 });
 test('bootstrap token cannot be guessed; first admin only once',async()=>{
  let r=await handle(req('/api/setup','POST',{setupToken:'bad',username:'admin',displayName:'Admin',password:'123456789012AAAA'}),env);
