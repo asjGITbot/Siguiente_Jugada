@@ -78,7 +78,7 @@ export function authorizeRows(values,user,kind) {
   return {schemaVersion:schema.version,source:{datasetKind:kind,simulated:kind==='DEMO',transport:'GOOGLE_SHEETS',label:'Google Sheets privado',sourceColumnCount:schema.columnCount},headers,rows,redactedFields:canReadP54?[]:['q54']};
 }
 
-export async function handle(request,env,io={fetch:globalThis.fetch,now:()=>Date.now()}) {
+export async function handle(request,env,io={fetch:(...args)=>globalThis.fetch(...args),now:()=>Date.now()}) {
   const origin=request.headers.get('Origin'),allowedOrigin=env.APP_ORIGIN;
   const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'private, no-store, max-age=0','Pragma':'no-cache','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','Vary':'Origin'};
   if(origin&&origin===allowedOrigin){headers['Access-Control-Allow-Origin']=origin;headers['Access-Control-Allow-Credentials']='true';}
