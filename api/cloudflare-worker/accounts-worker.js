@@ -155,7 +155,13 @@ async function checkGoogleSheetsConnection(env,io){
  try{account=JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_JSON);}catch{return failCheck('credentials','SERVICE_ACCOUNT_JSON_INVALID');}
  if(typeof account?.client_email!=='string'||typeof account?.private_key!=='string')return failCheck('credentials','SERVICE_ACCOUNT_JSON_INVALID');
  let token;
- try{token=await googleToken(env,{...io,now:()=>Date.now()});}catch{return failCheck('credentials','GOOGLE_OAUTH_FAILED');}
+ try{token=await googleToken(env,{...io,now:()=>Date.now()});}
+ catch(e){
+  const credentialCodes=new Set(['GOOGLE_CREDENTIALS_MISSING','GOOGLE_CREDENTIALS_JSON_INVALID','GOOGLE_CREDENTIALS_FORMAT_INVALID','GOOGLE_PRIVATE_KEY_INVALID','GOOGLE_JWT_SIGN_FAILED']);
+  const oauthCodes=new Set(['GOOGLE_OAUTH_NETWORK_FAILED','GOOGLE_OAUTH_INVALID_GRANT','GOOGLE_OAUTH_INVALID_CLIENT','GOOGLE_OAUTH_UNAUTHORIZED_CLIENT','GOOGLE_OAUTH_INVALID_SCOPE','GOOGLE_OAUTH_INVALID_REQUEST','GOOGLE_OAUTH_HTTP_FAILED','GOOGLE_OAUTH_RESPONSE_INVALID','GOOGLE_OAUTH_NO_ACCESS_TOKEN']);
+  const code=credentialCodes.has(e.message)||oauthCodes.has(e.message)?e.message:'GOOGLE_AUTH_UNEXPECTED_ERROR';
+  return failCheck(credentialCodes.has(code)?'credentials':'oauth',code);
+ }
  let response;
  try{
   const range=sheet.range.replace('!A:BH','!A1:BH1');
