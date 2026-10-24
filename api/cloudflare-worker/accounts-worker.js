@@ -1,5 +1,7 @@
 import {authorizeRows,googleToken,sheetIdFromUrl} from './worker.js';
-const COOKIE='__Host-sj_session',TTL=3600,ITERATIONS=600000,enc=new TextEncoder();
+// Cloudflare Workers WebCrypto PBKDF2 deriveBits rejects iteration counts over 100000.
+// Keep the encoded count in each password hash for deterministic verification.
+const COOKIE='__Host-sj_session',TTL=3600,ITERATIONS=100000,enc=new TextEncoder();
 const roles=new Set(['admin','player','parent','psychologist']),adults=new Set(['parent','psychologist']);
 const headers={'Content-Type':'application/json; charset=utf-8','Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'no-referrer','X-Frame-Options':'DENY'};
 function fail(code,status=400){const e=new Error(code);e.status=status;throw e;}
