@@ -137,6 +137,39 @@ async function readData(env,s,input,io){
  await q(env.DB,'UPDATE sessions SET data_reads=data_reads+1 WHERE token_hash=?',s.key).run();
  return data;
 }
+
+async function checkGoogleSheetsConnection(env,io){
+ // Admin-only, read-only; never expose identities, spreadsheet ids, rows, tokens or provider error bodies.
+ const failCheck=(stage,code)=>({ok:false,stage,code});
+ if(!env.GOOGLE_SHEETS_URL)return failCheck('configuration','SHEETS_URL_MISSING');
+ let id;
+ try{id=sheetIdFromUrl(env.GOOGLE_SHEETS_URL);}catch{return failCheck('configuration','SHEETS_URL_INVALID');}
+ let sheets;
+ try{sheets=JSON.parse(env.ALLOWED_SHEETS_JSON||'{}');}catch{return failCheck('configuration','ALLOWED_SHEETS_JSON_INVALID');}
+ if(!sheets||typeof sheets!=='object'||Array.isArray(sheets))return failCheck('configuration','ALLOWED_SHEETS_JSON_INVALID');
+ const sheet=sheets[id];
+ if(!sheet||!['REAL','DEMO'].includes(sheet.datasetKind))return failCheck('configuration','SHEET_NOT_AUTHORIZED');
+ if(typeof sheet.range!=='string'||!sheet.range.endsWith('!A:BH')||sheet.range.length>150)return failCheck('configuration','SHEET_RANGE_INVALID');
+ if(!env.GOOGLE_SERVICE_ACCOUNT_JSON)return failCheck('credentials','SERVICE_ACCOUNT_MISSING');
+ let account;
+ try{account=JSON.parse(env.GOOGLE_SERVICE_ACCOUNT_JSON);}catch{return failCheck('credentials','SERVICE_ACCOUNT_JSON_INVALID');}
+ if(typeof account?.client_email!=='string'||typeof account?.private_key!=='string')return failCheck('credentials','SERVICE_ACCOUNT_JSON_INVALID');
+ let token;
+ try{token=await googleToken(env,{...io,now:()=>Date.now()});}catch{return failCheck('credentials','GOOGLE_OAUTH_FAILED');}
+ let response;
+ try{
+  const range=sheet.range.replace('!A:BH','!A1:BH1');
+  const url='https://sheets.googleapis.com/v4/spreadsheets/'+encodeURIComponent(id)+'/values/'+encodeURIComponent(range)+'?valueRenderOption=FORMATTED_VALUE';
+  response=await io.fetch(url,{headers:{Authorization:'Bearer '+token},cache:'no-store'});
+ }catch{return failCheck('sheets','GOOGLE_SHEETS_NETWORK_ERROR');}
+ if(!response.ok)return failCheck('sheets',response.status===403?'GOOGLE_SHEETS_FORBIDDEN':response.status===404?'GOOGLE_SHEETS_NOT_FOUND':'GOOGLE_SHEETS_HTTP_ERROR');
+ let values;
+ try{values=(await response.json()).values;}catch{return failCheck('schema','GOOGLE_SHEETS_RESPONSE_INVALID');}
+ try{authorizeRows(values,{role:'player',players:['__diagnostic__'],canReadP54:false},sheet.datasetKind);}
+ catch{return failCheck('schema','V04_HEADERS_MISMATCH');}
+ return {ok:true,stage:'complete',code:'GOOGLE_SHEETS_READY'};
+}
+
 const publicErrors=new Set(['SESSION_EXPIRED','PASSWORD_CHANGE_REQUIRED','INVALID_CREDENTIALS','ADMIN_REQUIRED','USERNAME_EXISTS','USERNAME_INVALID','NAME_INVALID','PASSWORD_LENGTH','PASSWORD_MUST_DIFFER','PLAYERS_REQUIRED','PLAYERS_INVALID','ROLE_INVALID','P54_ADULT_ONLY','SELF_ADMIN_PROTECTED','LAST_ADMIN','SETUP_DENIED','TOO_MANY_ATTEMPTS','EXTERNAL_SETUP_REQUIRED','SHEET_NOT_AUTHORIZED','SOURCE_UNAVAILABLE','SCHEMA_HEADERS','ROW_COLUMNS','JSON_REQUIRED','BAD_REQUEST','NOT_FOUND','VIEWER_ACCOUNT_REQUIRED','ORIGIN_DENIED','HTTPS_REQUIRED']);
 export async function handle(request,env,io={fetch:globalThis.fetch}){
  const path=new URL(request.url).pathname,origin=new URL(request.url).origin;
@@ -176,6 +209,7 @@ export async function handle(request,env,io={fetch:globalThis.fetch}){
   if(path==='/api/password'&&request.method==='POST'){
    const result=await changePassword(env,s,await body(request));return respond(result.body,200,{'Set-Cookie':result.cookie});
   }
+  if(path==='/api/admin/diagnostics'&&request.method==='GET')return respond(await checkGoogleSheetsConnection(env,io));
   if(path==='/api/admin/users'&&request.method==='GET'){
    const rows=await q(env.DB,'SELECT * FROM users ORDER BY created_at,id').all();
    return respond({users:rows.results.map(u=>publicUser(u)),currentUser:publicUser(s.user,s.expires),players:JSON.parse(env.PLAYERS_JSON||'[]')});
